@@ -68,3 +68,12 @@ python -m venv venv
 venv\Scripts\activate         # Windows
 # source venv/bin/activate    # Mac/Linux
 pip install -r requirements.txt
+
+
+---
+
+## Author
+
+**Kunihiko J. Nakashima**  
+BSIT 3 — CSIT327 G8  
+ASANA: Public Transport Route and Stop Locator
