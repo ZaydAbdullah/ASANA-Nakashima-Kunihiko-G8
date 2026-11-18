@@ -1,0 +1,30 @@
+{% extends 'accounts/base.html' %}
+{% block title %}Login{% endblock %}
+{% block content %}
+<div class="row justify-content-center mt-5">
+    <div class="col-md-5">
+        <div class="card ticket-card">
+            <div class="card-body p-4">
+                <div class="text-center mb-4">
+                    <div class="stop-marker mx-auto mb-3" style="width: 60px; height: 60px; font-size: 1.8rem;">
+                        <i class="bi bi-bus-front-fill"></i>
+                    </div>
+                    <h2 class="page-title mb-1">Welcome Back</h2>
+                    <p class="text-muted mb-0">Sign in to find your route</p>
+                </div>
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="btn btn-primary w-100 mt-2">
+                        <i class="bi bi-box-arrow-in-right me-1"></i>Login
+                    </button>
+                </form>
+                <hr class="my-4">
+                <p class="text-center mb-0">
+                    New commuter? <a href="{% url 'register' %}" class="fw-bold text-decoration-none">Register here</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

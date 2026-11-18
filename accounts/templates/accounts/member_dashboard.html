@@ -1,0 +1,50 @@
+{% extends 'accounts/base.html' %}
+{% block title %}Commuter Dashboard{% endblock %}
+{% block content %}
+<div class="mt-4">
+    <div class="d-flex align-items-center mb-4">
+        <div class="stop-marker me-3">
+            <i class="bi bi-person-walking"></i>
+        </div>
+        <div>
+            <h1 class="page-title mb-0">Commuter Dashboard</h1>
+            <p class="text-muted mb-0">Welcome, <strong>{{ user.username }}</strong></p>
+        </div>
+    </div>
+
+    <div class="row g-3 mt-2">
+        <div class="col-md-6">
+            <div class="card h-100" style="border-left: 5px solid var(--transit-blue);">
+                <div class="card-body p-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="stop-marker me-3">
+                            <i class="bi bi-person-circle"></i>
+                        </div>
+                        <h5 class="card-title mb-0">My Profile</h5>
+                    </div>
+                    <p class="card-text text-muted">Update your personal details and profile photo.</p>
+                    <a href="{% url 'profile' %}" class="btn btn-primary btn-sm">
+                        <i class="bi bi-arrow-right me-1"></i>Go to Profile
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card h-100" style="border-left: 5px solid var(--go-green);">
+                <div class="card-body p-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="stop-marker" style="background: var(--go-green);">
+                            <i class="bi bi-map-fill"></i>
+                        </div>
+                        <h5 class="card-title mb-0">Find Routes</h5>
+                    </div>
+                    <p class="card-text text-muted">Search transit routes and nearby stops. Available in Phase 2.</p>
+                    <button class="btn btn-outline-secondary btn-sm" disabled>
+                        <i class="bi bi-clock me-1"></i>Coming Soon
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
